@@ -37,5 +37,6 @@ public class BankAccount {
         account.displayBalance();
         account.withdraw(100);
         account.displayBalance();
+        account.withdraw(1);
     }
 }

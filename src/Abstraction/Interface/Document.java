@@ -15,9 +15,9 @@ class Image implements printable{
     }
     public static void main(String[] args) {
 
-        printable d=new Document();
+        Document d=new Document();
         d.print();
-        printable i=new Image();
+        Image i=new Image();
         i.print();
     }
 }

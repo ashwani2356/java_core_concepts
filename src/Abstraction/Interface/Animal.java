@@ -5,4 +5,3 @@ package Abstraction.Interface;
     void eat();
     void sleep();
 }
-class

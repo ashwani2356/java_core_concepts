@@ -1,4 +1,7 @@
 package Abstraction.Interface;
+
+import java.util.Scanner;
+
 interface payments{
     void pay();
 }
@@ -10,7 +13,7 @@ interface payments{
 }
 class NetBanking implements payments{
    public void pay(){
-    System.out.println("pay using Netbanking");
+    System.out.println("pay using NetBanking");
    }
 }
 class Checkout{
@@ -18,9 +21,23 @@ class Checkout{
   payment.pay();
  }
  public static void main(String[] args) {
-  payments p1=new UpiPayments();
-  payments p2=new NetBanking();
-  p1.pay();
-  p2.pay();
+  UpiPayments upiPayments=new UpiPayments();
+  NetBanking netBanking=new NetBanking();
+  Checkout checkout=new Checkout();
+     System.out.println("1 pay using Upi");
+     System.out.println("2 pay using NetBanking");
+     Scanner sc=new Scanner(System.in);
+     int user_input=sc.nextInt();
+     switch (user_input){
+         case 1:
+             checkout.processPayment(upiPayments);
+             break;
+             case 2:
+                 checkout.processPayment(netBanking);
+                 break;
+                 default:
+                     System.out.println("Invalid input");
+     }
+
  }
 }

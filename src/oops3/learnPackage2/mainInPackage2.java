@@ -8,5 +8,6 @@ public class mainInPackage2 extends teacher{
         tc.teachingClass=12;
         mainInPackage2 mainInPackage2=new mainInPackage2();
         mainInPackage2.studentsCount=40;
+
     }
 }

@@ -27,5 +27,6 @@ class Flight extends Transport{
         t1.travelMode();
         Transport t2 = new Flight();
         t2.travelMode();
+
     }
 }
